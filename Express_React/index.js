@@ -1,6 +1,6 @@
 import express from 'express';
-import cors from cors;
-import fs from fs;
+import cors from 'cors';
+import fs from 'fs';
 const app=express();
 app.use(cors());
 app.use(express.json());
@@ -21,6 +21,6 @@ const data=fs.readFile("products.json","utf-8");
    fs.writeFile("products.json",JSON.stringify(product,null,2));
    res.json(newproduct);
 });
-app.listen(4000,()=>{
-console.log("server is running on port 4000");    
+app.listen(3000,()=>{
+console.log("server is running on port 3000");    
 })
